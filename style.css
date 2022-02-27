@@ -18,7 +18,7 @@ body{
 }
 
 section{
-    padding: 20px 300px;
+    padding: 20px 200px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -38,14 +38,13 @@ section{
 /*------IMAGES------*/
 
 img{
-    border-radius: 10px;
-    
-    
+    padding: 0 15px;
 }
 
 .img-wrapper{
     margin-bottom:10px;
     margin-top:10px;
+    
 }
 
 /*---------PRODUCT CARD-----------*/
@@ -55,11 +54,11 @@ img{
     border-radius: 10px;
 
     /*background-color: white;*/
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
     margin: auto;
     text-align: center;
     font-family: arial;
-    margin: 10px; 
+    margin: 20px 5px 20px 5px; 
 }
 
 .card:hover {
