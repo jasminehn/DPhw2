@@ -11,21 +11,80 @@
 
 body{
     min-height: 100vh;
-    /*background: linear-gradient(#5cd0ff,#e5a8e3);*/
-    background-image: url(images/bg-2.png);
+    background: linear-gradient(#5cd0ff,#0731eb);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
 section{
-    padding: 20px 100px;
+    padding: 20px 300px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.everythang{
+.products{
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.text-1{
+    font-size: 70px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/*------IMAGES------*/
+
+img{
+    border-radius: 10px;
+    
+    
+}
+
+.img-wrapper{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+/*---------PRODUCT CARD-----------*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    border-radius: 10px;
+
+    /*background-color: white;*/
+    background: rgba(255, 255, 255, 0.6);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin: 10px; 
+}
+
+.card:hover {
+
+}
+  
+.price {
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+}
+  
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;    
+}
+  
+.card button:hover {
+    opacity: 0.7;
 }
