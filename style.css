@@ -33,10 +33,10 @@ section{
     font-size: 70px;
     text-align: center;
     font-weight: 600;
+    padding-top: 60px;
 }
 
 /*------IMAGES------*/
-
 img{
     padding: 0 15px;
 }
@@ -44,7 +44,26 @@ img{
 .img-wrapper{
     margin-bottom:10px;
     margin-top:10px;
-    
+}
+
+/*------NAVBAR-------*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: #010624;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.menu-items{
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    font-size: 28px;
 }
 
 /*---------PRODUCT CARD-----------*/
@@ -64,10 +83,18 @@ img{
 .card:hover {
 
 }
+
+.card h1 {
+    padding: 15px;
+}
+
+.card p {
+    font-size: 14px;
+}
   
 .price {
     color: black;
-    font-size: 22px;
+    font-size: 22px !important;
     padding: 10px;
 }
   
@@ -86,4 +113,61 @@ img{
   
 .card button:hover {
     opacity: 0.7;
+}
+
+/*-------CART-------*/
+.cart {
+    margin: 10px 70px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cart table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.cart table thead {
+    font-weight: 700;
+}
+
+.cart table thead td{
+    background: #0731eb;
+    color: white;
+    border: none;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+    width: 100%;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
 }
