@@ -18,11 +18,12 @@ body{
 }
 
 section{
-    padding: 20px 200px;
+    
     font-family: 'Montserrat', sans-serif;
 }
 
 .products{
+    padding: 20px 200px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -33,7 +34,7 @@ section{
     font-size: 70px;
     text-align: center;
     font-weight: 600;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 /*------IMAGES------*/
@@ -59,11 +60,11 @@ img{
     margin: 15px;
     display: flex;
     justify-content: space-between;
+    font-size: 28px;
 }
 
 .navbar a {
     color: white;
-    font-size: 28px;
 }
 
 /*---------PRODUCT CARD-----------*/
@@ -92,8 +93,7 @@ img{
     font-size: 14px;
 }
   
-.price {
-    color: black;
+.item-price {
     font-size: 22px !important;
     padding: 10px;
 }
@@ -117,57 +117,164 @@ img{
 
 /*-------CART-------*/
 .cart {
-    margin: 10px 70px;
+    padding: 20px 100px;
+    margin: 20px 200px;
     background-color: white;
     border-radius: 10px;
+}
+
+.cart .cart-title {
+    font-size: 45px;
+    text-align: center;
+    margin: 30px 0 50px 0;
 }
 
 .cart table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    
+}
+
+.card table, thead, td {
+    border: 1px solid #000;
 }
 
 .cart table thead {
     font-weight: 700;
+    text-align: center;
 }
 
-.cart table thead td{
-    background: #0731eb;
+.cart table thead td {
+    background: #086386;
     color: white;
     border: none;
+    padding: 6px 0;
 }
 
-.cart-header {
-    font-weight: bold;
-    font-size: 1.25em;
-    
+.cart table thead td:nth-child(2) {
+    width: 150px;
 }
 
-.cart-column {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    margin-right: 1.5em;
-    padding-bottom: 10px;
+.cart table thead td:nth-child(3),
+.cart table thead td:nth-child(4) {
+    width: 100px;
+}
+
+.cart .cart-item {
+    text-align: center;
+}
+
+.cart .cart-item h1 {
     margin-top: 10px;
 }
 
-.cart-row {
+.cart .cart-item .item-image {
+    width: 175px;
+    height: auto;
+}
+
+.cart .cart-item .quantity {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: rgb(232, 250, 255);
+    color: rgb(70, 70, 70);
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.cart .remove-item .fa-trash {
+    cursor: pointer;
+}
+
+/*-----------FEES------------*/
+.fees {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    margin-top: 25px;
 }
 
-.cart-item {
-    width: 45%;
+.fees .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
 }
 
-.cart-price {
-    width: 20%;
-    font-size: 1.2em;
-    color: #333;
+/*-----------BILLING------------*/
+.form {
+    display: flex;
+    margin-top: 30px;
 }
 
-.cart-quantity {
-    width: 35%;
+.form h2 {
+    margin-bottom: 10px;
+}
+
+.address, .payment {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 50%;
+}
+
+.form label {
+    margin: 10px 0 5px 0;
+}
+
+.form input {
+    margin: 5px 0 15px 0;
+}
+
+.form .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+/*-----------PLACE ORDER-----------*/
+.terms-checkboxes{
+    margin-bottom: 10px;
+}
+
+.show-terms {
+    color: #5cd0ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.cart .place-order {
+    width: 240px;
+    height: 45px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: #010624;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease 0s;
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.cart .place-order:hover {
+    background: linear-gradient(#5cd0ff,#0731eb);
+    box-shadow: 0px 15px 20px rgba(46, 131, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+/*--------------TERMS--------------*/
+.terms {
+    padding: 60px 100px;
+    margin: 20px 200px;
+    background-color: white;
+    border-radius: 10px;
 }

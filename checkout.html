@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="script.js" async></script>
         <script src="https://kit.fontawesome.com/69c6d76ec7.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -35,7 +35,7 @@
         </section>
 
         <section class="cart">
-            <h1>Cart</h1>
+            <p class="cart-title">Checkout</p>
             <!--
             <div class="cart-row">
                 <span class="cart-item cart-header cart-column">ITEM</span>
@@ -48,17 +48,128 @@
             <h3 class="cart-total-title">Total: </h3>
             <h4 class="cart-total-price"></h4>
             -->
-            <table>
+
+            <!--ITEMS-->
+            <table class="cart-items" id="cart">
                 <thead>
                     <tr>
                         <td>Item</td>
                         <td>Price per unit</td>
                         <td>Quantity</td>
-                        <td>Total</td>
                         <td>Remove</td>
+                        <td>Total</td>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr class="cart-item">
+                        <td>
+                            <h1>Tuna</h1>
+                            <img src="images/tuna.png" class="item-image">
+                            <!--<p>You can tune a guitar, but you can't tuna fish</p>-->
+                        </td>
+                        <td>$10.00</td>
+                        <td><input class="quantity" type="number" value="1"></td>
+                        <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                        <td class="cart-item-total">$120.00</td>
+                    </tr>
+                    <tr class="cart-item">
+                        <td><h1>Bass</h1> <img src="images/bass.png" class="item-image"></td>
+                        <td>$15.00</td>
+                        <td><input class="quantity" type="number" value="1"></td>
+                        <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                        <td>$310.00</td>
+                    </tr>
+                </tbody>
             </table>
+
+            <!--BILLING AND ADDRESS-->
+            <div class="fees">
+                <div class="row">
+                    <p>Subtotal</p>
+                    <p>$20</p>
+                </div>
+                <div class="row">
+                    <p>Shipping</p>
+                    <p>$20</p>
+                </div>
+                <div class="row">
+                    <p>Tax</p>
+                    <p>$20</p>
+                </div>
+                <hr style="height:2px;border-width:0;color:gray;background-color:black">
+                <div class="row total">
+                    <p>Total</p>
+                    <p>$100.00</p>
+                </div>
+            </div>
+
+            <!--BILLING AND ADDRESS-->
+            <div class="form">
+                <!--ADDRESS INFO-->
+                <div class="address">
+                    <h2>Billing Address</h2>
+                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Jonathan Gurary">
+                        
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="email@website.com">
+                        
+                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                    <input type="text" id="adr" name="address" placeholder="1407 W Main St">
+                        
+                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="city" name="city" placeholder="Whitewater">
+            
+                    <div class="row">
+                        <div >
+                            <label for="state"><i class="fa-regular fa-map"></i> State</label>
+                            <input type="text" id="state" name="state" placeholder="WI" >
+                        </div>
+                        <div >
+                            <label for="zip"><i class="fa-solid fa-map-pin"></i> Zip</label>
+                            <input type="text" id="zip" name="zip" placeholder="53190">
+                        </div>
+                    </div>
+                </div>
+
+                <!--PAYMENT INFO-->
+                <div class="payment">
+                    <h2>Payment</h2>
+                    <label for="cname"><i class="fa-solid fa-id-card"></i> Name on Card</label>
+                    <input type="text" id="cname" name="cardname" placeholder="Jonathan Gurary">
+                        
+                    <label for="ccnum"><i class="fa-solid fa-credit-card"></i> Credit card number</label>
+                    <input type="text" id="ccnum" name="cardnumber" placeholder="1234567890">
+                        
+                    <div class="row">
+                        <div>
+                            <label for="expyear"> <i class="fa-solid fa-calendar"></i> Expiration</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="02/22">
+                        </div>
+                        <div>
+                            <label for="cvv"><i class="fa-solid fa-unlock"></i> CVV</label>
+                            <input type="password" id="cvv" name="cvv" placeholder="420" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--TERMS N SUBMIT-->
+            <div>
+                <!--TERMS AND CONDITIONS-->
+                <div class="terms-checkboxes">
+                    <input type="checkbox" name="agree" value="I agree" id="myCheck" onclick="isChecked()">
+                    <label for="agree">I agree to be billed <span id="agree-price">????????</span> and solemly swear to adhere to law of no backsies</label>
+                </div>
+                <div class="terms-checkboxes">
+                    <input type="checkbox" name="accept" value="I agree" id="myCheck" onclick="isChecked()">
+                    <label for="accept">I accept the terms and conditions of purchase <a href="terms.html">here</a></label> 
+                </div>
+
+                <!--SUBMIT BUTTON-->
+                <button class="btn" onclick="thankYou()">Place Order</button>
+            </div>
+
         </section>
     </body>
 </html>
