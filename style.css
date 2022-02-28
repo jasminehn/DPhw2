@@ -63,8 +63,8 @@ img{
     font-size: 28px;
 }
 
-.navbar a {
-    color: white;
+.navbar .fa-solid {
+    cursor: pointer;
 }
 
 /*---------PRODUCT CARD-----------*/

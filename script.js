@@ -132,11 +132,6 @@ function addItemToCart(title, price, imageSrc) {
 
 function purchaseClicked() {
     alert('Thank you for your purchase!')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
-    }
-    updateCartTotal()
 }
 
 function removeCartItem(event) {
@@ -176,7 +171,7 @@ function updateCartTotal() {
             subtotal = Math.round(subtotal * 100) / 100
             console.log("subtotal",subtotal)
         }
-        total = total + subtotal + 10
+        total = total + subtotal + 1999
         total = Math.round(total * 100) / 100
         console.log("total",total)
     }catch (error) {
